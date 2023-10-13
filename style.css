@@ -39,6 +39,20 @@ body {
   position: relative; /* Define o corpo como um ponto de referência para o posicionamento absoluto */
 }
 
+#userName {
+  color: var(--accentColor);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.25;
+  font-family: var(--font);
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(90, 89, 89, 0.5);
+}
+
+
+
 /* Estilos para o ícone de compartilhamento */
 #shareIcon {
   position: absolute;
