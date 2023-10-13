@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala inicial e a largura da viewport -->
+  <title>Antonio Marcos</title> <!-- Define o título da página -->
+  <link rel="icon" href="./icon/tony.jpg" type="image/x-icon"> <!-- Define o ícone da página -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> <!-- Adiciona os ícones do Font Awesome -->
+  <link rel="stylesheet" href="style.css"> <!-- Adiciona o arquivo CSS personalizado -->
+</head>
+<body>
+
+<div id="particles-js"></div> <!-- Div para os efeitos de partículas -->
+
+<a id="profilePicture" href="#"> <!-- Link para a foto de perfil -->
+  <img src="./icon/tony.jpg" alt="Foto de Perfil"> <!-- Imagem de perfil -->
+</a>
+
+<div id="userName"></div> <!-- Div para o nome do usuário -->
+
+<div id="shareIcon">
+  <i class="fas fa-share"></i>
+</div>
+
+<div id="links">
+  <a class="link" href="https://github.com/tonysilva22" target="_blank">
+    <img src="./icon/394187_github_icon.svg" alt="Instagram"> GitHub <!-- Link para o GitHub -->
+  </a>
+  <a class="link" href="https://www.linkedin.com/in/antonio-marcos-933b14133/" target="_blank">
+    <img src="./icon/317750_linkedin_icon.svg" alt="Linkedin"> Linkedin <!-- Link para o Linkedin -->
+  </a>
+  <a class="link" href="https://www.instagram.com/tonysilva2_2/" target="_blank">
+    <img src="./icon/5296765_camera_instagram_instagram logo_icon.svg" alt="Instagram"> Instagram <!-- Link para o Instagram -->
+  </a>
+</div>
+
+<script>
+  function sharePage() {
+ const url = window.location.href;
+ if (navigator.share) {
+   navigator.share({
+     title: document.title,
+     url: url
+   }).then(() => {
+     console.log('Página compartilhada com sucesso!'); // Mensagem de sucesso
+   }).catch((error) => {
+     console.error('Erro ao compartilhar:', error); // Mensagem de erro em caso de falha
+   });
+ } else {
+   alert('Seu navegador não suporta a funcionalidade de compartilhamento.'); // Alerta se o navegador não suportar a funcionalidade
+ }
+}
+document.getElementById('shareIcon').addEventListener('click', sharePage); // Adiciona um evento de clique ao ícone de compartilhamento
+</script>
+
+<script src="./particles.js"></script> <!-- Script para o efeito de partículas -->
+<script src="./app.js"></script> <!-- Script da aplicação principal -->
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MLN29FDR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5MLN29FDR');
+</script>
+
+</body>
+</html>

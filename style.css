@@ -1,0 +1,222 @@
+/* Importa a fonte 'Karla' do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+/* Define variáveis personalizadas */
+:root {
+  --accentColor: #ffffff; /* Cor de destaque (branco) */
+  --font: 'Karla', sans-serif; /* Fonte utilizada */
+  --delay: 0.1s; /* Atraso para animações */
+}
+
+/* Estilos para o corpo da página */
+body {
+  /* Zera margens e preenchimentos e define altura mínima da viewport */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--font); /* Aplica a fonte definida */
+  /* Fundo gradiente com cores */
+  background: linear-gradient(60deg, #1b1b1b, #011755, #051f94, #131212);
+  /* Opacidade inicial com animação de transição */
+  opacity: 0;
+  animation: transitionAnimation 1s ease-out var(--delay) 1 forwards;
+  /* Define a repetição e o tamanho do fundo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Estilos para as imagens nos links */
+.link img {
+  width: 24px; /* Define o tamanho das imagens */
+  height: 24px;
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+  margin-right: 6px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+/* Outros estilos específicos do corpo */
+body {
+  position: relative; /* Define o corpo como um ponto de referência para o posicionamento absoluto */
+}
+
+/* Estilos para o ícone de compartilhamento */
+#shareIcon {
+  position: absolute;
+  bottom: 200px; /* Define a distância do fundo */
+  right: 20px;
+  color: #fff ; /* Cor do ícone */
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: linear-gradient(45deg,#0749ff, #06134d, #0749ff);
+  cursor: pointer;
+  transition: 0.2s;
+  border: 2px flex #000c7c; 
+  border-radius: 25px; 
+  box-shadow: 0px 0px 10px 5px #0658d4; 
+}
+
+
+
+/* Estilos para os ícones das redes sociais no botão de compartilhamento */
+.button-links img {
+  width: 23px; /* Ajusta a largura dos ícones */
+  height: 23px; /* Ajusta a altura dos ícones */
+}
+
+/* Estilos para o botão de compartilhamento */
+.button {
+  position: relative;
+  overflow: hidden;
+  width: 90px;
+  height: 50px;
+  border-radius: 25px;
+  border: 0;
+  color: #f7f7f7;
+  background: linear-gradient(45deg,#0749ff, #06134d, #0749ff);
+  cursor: pointer;
+  transition: 0.2s;
+  border: 2px flex #000c7c; 
+  border-radius: 25px; 
+  box-shadow: 0px 0px 10px 5px #0658d4; 
+}
+
+
+.button i {
+  font-size: 6px; 
+}
+
+.button-text,
+.button-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.button-text {
+  justify-content: center;
+}
+
+.button-links {
+  opacity: 0;
+  justify-content: space-between;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.button-links a {
+  translate: 0 50px;
+  transition: 0.3s;
+  margin: 0;
+}
+
+.button:hover {
+  border-radius: 6px;
+}
+
+.button:hover .button-links a:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.button:hover .button-links a:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.button:hover .button-links a:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.button:hover .button-text {
+  translate: 0 -100%;
+}
+
+.button:hover .button-links {
+  opacity: 1;
+}
+
+.button:hover .button-links a {
+  translate: 0;
+}
+
+/* Estilos para a foto de perfil */
+#profilePicture,
+#profilePicture img {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 40px auto 20px;
+  border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Estilos para os links de redes sociais */
+#links {
+  max-width: 600px;
+  width: auto;
+  display: block;
+  margin: 27px auto;
+  font-size: 16px;
+  text-shadow: 0px 0px 10px #000000; /* Adiciona uma sombra à fonte */
+}
+
+
+
+.link {
+  position: relative;
+  background-color: transparent;
+  color: var(--accentColor); /* Usa a cor de destaque definida */
+  border: solid var(--accentColor) 2px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  animation: shakeAnimation 0.5s infinite; /* Aplica a animação */
+}
+
+/* Estilos para hover (quando o mouse passa por cima) */
+@media (hover: hover) {
+  .link:hover {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+  }
+}
+
+/* Estilos para clique nos links */
+.link:active {
+  background-color: var(--accentColor);
+  color: var(--bgColor);
+}
+
+/* Animação de transição para o corpo da página */
+@keyframes transitionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para o efeito de partículas */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
