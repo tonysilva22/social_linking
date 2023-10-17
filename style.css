@@ -226,6 +226,35 @@ body {
   }
 }
 
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;  
+  display: flex;
+}
+.footer-content p {
+  color: #ffffff; /* Substitua com a cor desejada */
+}
+
+
+.social-icons a i {
+  color: rgb(255, 255, 255);
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 10px 10px;
+  font-size: 20px;
+  
+}
+
+
+
 /* Estilos para o efeito de partículas */
 #particles-js {
   position: absolute;
