@@ -25,9 +25,7 @@
 
     <div id="userName">Antonio Marcos</div>
 
-    <div id="shareIcon">
-        <i class="fas fa-share"></i>
-    </div>
+   
 
     <div id="links">
         <a class="link" href="https://github.com/tonysilva22" target="_blank">
@@ -56,26 +54,7 @@
     </footer>
     
 
-    <script>
-        function sharePage() {
-            const url = window.location.href;
-            if (navigator.share) {
-                navigator.share({
-                    title: document.title,
-                    url: url
-                }).then(() => {
-                    console.log('Página compartilhada com sucesso!');
-                }).catch((error) => {
-                    console.error('Erro ao compartilhar:', error);
-                });
-            } else {
-                alert('Seu navegador não suporta a funcionalidade de compartilhamento.');
-            }
-        }
-
-        document.getElementById('shareIcon').addEventListener('click', sharePage);
-    </script>
-
+   
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MLN29FDR"></script>
     <script>
